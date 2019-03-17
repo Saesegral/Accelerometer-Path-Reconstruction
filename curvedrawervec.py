@@ -57,7 +57,7 @@ def getAccelData(name, threshold=7):
         accels=[]
         for i, row in enumerate( rdr ):
             if i <= threshold: continue
-            times.append(float(row[1]))
+            times.append(float(row[1])/1000)
             accels.append(Vector([float(n) for n in row[2:5]]))
     return times, accels
 
